@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<psalm
+
+    errorLevel="5"
+    resolveFromConfigFile="true"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="https://getpsalm.org/schema/config"
+    xsi:schemaLocation="https://getpsalm.org/schema/config vendor/vimeo/psalm/config.xsd"
+>
+    <projectFiles>
+        <directory name="app" />
+        <directory name="database/factories" />
+        <directory name="database/seeders" />
+        <directory name="routes" />
+        <directory name="tests" />
+        <ignoreFiles>
+            <directory name="vendor" />
+        </ignoreFiles>
+    </projectFiles>
+
+    <issueHandlers>
+  
+         <InvalidArgument>
+            <errorLevel type="suppress">
+                <directory name="tests" /> <!-- all InvalidArgument issues in this directory are suppressed  they come from packages i dont have control over--> 
+            </errorLevel>
+        </InvalidArgument>
+
+        <NoValue>
+            <errorLevel type="suppress">
+                <directory name="tests" /> // False postive on markTestSkipped
+            </errorLevel>
+        </NoValue>
+
+        <UndefinedInterfaceMethod>
+            <errorLevel type="suppress">
+            <directory name="app" /> <!-- all UndefinedInterfaceMethod issues in this directory are suppressed  they come from packages i dont have control over--> 
+            </errorLevel>
+        </UndefinedInterfaceMethod>
+
+    </issueHandlers>
+
+</psalm>

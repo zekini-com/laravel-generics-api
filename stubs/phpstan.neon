@@ -1,0 +1,17 @@
+includes:
+    - ./vendor/nunomaduro/larastan/extension.neon
+
+parameters:
+    level: 5
+    paths:
+        - app
+        - database
+        - routes
+#        - tests
+    excludePaths:
+        - app/Helpers/GolfPlayedHelpers.php
+    ignoreErrors:
+        - '#Call to an undefined method#'
+        - '#undefined property#'
+        - '#view-string|null, string given#'
+        - '#::union#'
