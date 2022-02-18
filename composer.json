@@ -1,5 +1,5 @@
 {
-    "name": "zekini/laravel-generics",
+    "name": "zekini/laravel-genericsa-api",
     "description": "A simple package to encapsulate all of our generic API classes at Zekini to a package we can require in all our API projects",
     "type": "library",
     "license": "MIT",
@@ -13,7 +13,6 @@
     "require": {
         "php": "^8.1",
         "barryvdh/laravel-dompdf": "dev-master",
-        "doctrine/dbal": "4.0.x-dev",
         "fakerphp/faker": "^1.19",
         "spatie/laravel-activitylog": "dev-main",
         "spatie/laravel-permission": "^5.4",
