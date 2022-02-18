@@ -1,5 +1,5 @@
 {
-    "name": "zekini/laravel-genericsa-api",
+    "name": "zekini/laravel-generics-api",
     "description": "A simple package to encapsulate all of our generic API classes at Zekini to a package we can require in all our API projects",
     "type": "library",
     "license": "MIT",
